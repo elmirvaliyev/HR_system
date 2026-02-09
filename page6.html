@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="az">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HSE Təlim İstiqaməti</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            color: #363b3f;
+
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Corporate Colors */
+        :root {
+            --color-primary: #363b3f;
+            --color-secondary: #656c72;
+            --color-accent: #a22a2c;
+            --color-bg: #f4f4f4;
+            --color-white: #ffffff;
+        }
+
+        .text-primary { color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+
+        .title-font { font-family: 'Montserrat', sans-serif; }
+
+        /* Header Bar */
+
+
+        /* Header Section */
+        .header-section {
+            padding: 40px 60px 20px 60px;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-accent);
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 20px 60px 40px 60px;
+            flex: 1;
+        }
+
+        .column-header {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+        
+        .column-header i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Feature List Items */
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .feature-icon {
+            min-width: 36px;
+            height: 36px;
+            background-color: rgba(162, 42, 44, 0.1);
+            color: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-primary);
+            margin: 0 0 4px 0;
+        }
+
+        .feature-desc {
+            font-size: 0.8rem;
+            color: var(--color-secondary);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-secondary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .bg-watermark {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            font-size: 300px;
+            color: rgba(0,0,0,0.02);
+            z-index: 0;
+            pointer-events: none;
+        }
+                                #scale-wrapper {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4f4;
+        }
+
+        .slide-container {
+
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body>
+            <div id="scale-wrapper">
+  <div class="slide-container">
+<div class="slide-container">
+<!-- Accent Bar -->
+
+<!-- Watermark Icon -->
+<div class="bg-watermark">
+<i class="fas fa-hard-hat"></i>
+</div>
+<!-- Header -->
+<div class="header-section z-10">
+<h1 class="main-title title-font">HSE Təlim İstiqaməti</h1>
+<p class="sub-title">SƏTƏM və peşəkar inkişaf təlimlərinin rəqəmsal idarəedilməsi (8 Funksiya)</p>
+</div>
+<!-- Main Content Grid -->
+<div class="content-grid z-10">
+<!-- Column 1: Processes -->
+<div class="feature-column">
+<div class="column-header">
+<i class="fas fa-cogs"></i> Proseslər
+                </div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-user-plus"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Təlim müraciəti</h4>
+<p class="feature-desc">Yeni işə qəbul və ya vəzifə dəyişikliyi zamanı avtomatik sorğular.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Təlim qeydiyyatı</h4>
+<p class="feature-desc">Təlim mərkəzi tərəfindən keçirilən təlimlərin sistemdə qeydi.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-bell"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Bildirişlər</h4>
+<p class="feature-desc">İştirakçılara və rəhbərlərə avtomatik xatırlatmalar.</p>
+</div>
+</div>
+</div>
+<!-- Column 2: Data Management -->
+<div class="feature-column">
+<div class="column-header">
+<i class="fas fa-database"></i> Məlumat Bazası
+                </div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Təlimçi bazası</h4>
+<p class="feature-desc">Daxili və xarici təlimçilərin vahid reyestri və məlumatları.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-book"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Təlim kataloqu</h4>
+<p class="feature-desc">Təlim adları, növləri və etibarlılıq müddətləri bazası.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Məlumat modeli</h4>
+<p class="feature-desc">Düzgün strukturlaşdırılmış relational verilənlər bazası.</p>
+</div>
+</div>
+</div>
+<!-- Column 3: Analytics & Output -->
+<div class="feature-column">
+<div class="column-header">
+<i class="fas fa-chart-line"></i> Analitika
+                </div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">Hesabatlar</h4>
+<p class="feature-desc">Ümumi və ya işçi əsaslı təlim tarixçəsi hesabatları.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="fas fa-file-export"></i></div>
+<div class="feature-content">
+<h4 class="feature-title">PDF/Excel çıxarış</h4>
+<p class="feature-desc">Təsdiqlənmiş formatda hesabatların sistemdən ixracı.</p>
+</div>
+</div>
+<!-- Summary Box -->
+<div style="background-color: #363b3f; border-radius: 8px; padding: 20px; color: white; margin-top: 30px; box-shadow: 0 10px 20px rgba(54, 59, 63, 0.2);">
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+<i class="fas fa-award text-accent" style="font-size: 1.5rem; margin-right: 15px;"></i>
+<div>
+<span style="display: block; font-size: 0.8rem; opacity: 0.8;">Nəticə</span>
+<span style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Tam Avtomatlaşdırma</span>
+</div>
+</div>
+<p style="font-size: 0.85rem; opacity: 0.9; margin: 0; line-height: 1.4;">Bütün SƏTƏM təlim prosesi kağızsız rejimə keçirilib.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="page-number">06</div>
+</div>
+    <script>
+function scaleSlide() {
+    const slide = document.querySelector('.slide-container');
+    const scaleX = window.innerWidth / 1280;
+    const scaleY = window.innerHeight / 720;
+    const scale = Math.min(scaleX, scaleY);
+    slide.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', scaleSlide);
+scaleSlide();
+</script>
+</body>
+</html>

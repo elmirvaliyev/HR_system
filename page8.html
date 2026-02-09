@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="az">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texnoloji Alətlər</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            color: #363b3f;
+
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Corporate Colors */
+        :root {
+            --color-primary: #363b3f;
+            --color-secondary: #656c72;
+            --color-accent: #a22a2c;
+            --color-bg: #f4f4f4;
+            --color-white: #ffffff;
+            --color-accent-light: rgba(162, 42, 44, 0.08);
+        }
+
+        .text-primary { color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+
+        .title-font { font-family: 'Montserrat', sans-serif; }
+
+        /* Header Bar */
+ 
+
+        /* Header Section */
+        .header-section {
+            padding: 40px 60px 10px 60px;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-accent);
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        /* Grid Container */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 25px;
+            padding: 40px 60px;
+            flex: 1;
+        }
+
+        /* Tech Card */
+        .tech-card {
+            background-color: var(--color-white);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid transparent;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left-color: var(--color-accent);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-accent-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: var(--color-accent);
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .tech-card:hover .icon-box {
+            background-color: var(--color-accent);
+            color: white;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .tech-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .tech-role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .tech-desc {
+            font-size: 0.9rem;
+            color: var(--color-secondary);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Footer */
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-secondary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .bg-decoration {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.03;
+
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+                                #scale-wrapper {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4f4;
+        }
+
+        .slide-container {
+
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body>
+            <div id="scale-wrapper">
+  <div class="slide-container">
+<div class="slide-container">
+<!-- Accent Bar -->
+
+<!-- Background Pattern -->
+<div class="bg-decoration"></div>
+<!-- Header -->
+<div class="header-section z-10">
+<h1 class="main-title title-font">Texnoloji Alətlər</h1>
+<p class="sub-title">Sistemin arxitekturasını təşkil edən əsas Microsoft platformaları və inteqrasiyalar</p>
+</div>
+<!-- Grid Content -->
+<div class="tech-grid z-10">
+<!-- Card 1: Power Apps -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fas fa-layer-group"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">Power Apps</span>
+<span class="tech-role">İstifadəçi İnterfeysi</span>
+<p class="tech-desc">Bütün müraciət formaları, təsdiq ekranları və admin panelləri üçün unikal interfeys.</p>
+</div>
+</div>
+<!-- Card 2: Dataverse -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fas fa-database"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">Dataverse</span>
+<span class="tech-role">Məlumat Bazası</span>
+<p class="tech-desc">Mərkəzləşdirilmiş, təhlükəsiz və relational məlumat strukturu anbarı.</p>
+</div>
+</div>
+<!-- Card 3: Power Automate -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fas fa-project-diagram"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">Power Automate</span>
+<span class="tech-role">İş Axını &amp; Avtomatlaşdırma</span>
+<p class="tech-desc">Təsdiq prosesləri, bildirişlər və sistemlər arası məlumat axınının idarə edilməsi.</p>
+</div>
+</div>
+<!-- Card 4: Power BI -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fas fa-chart-pie"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">Power BI</span>
+<span class="tech-role">Analitika &amp; Hesabat</span>
+<p class="tech-desc">KPI göstəriciləri, vizual dashboard-lar və interaktiv idarəetmə hesabatları.</p>
+</div>
+</div>
+<!-- Card 5: Microsoft Teams -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fab fa-microsoft"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">Microsoft Teams</span>
+<span class="tech-role">Kommunikasiya &amp; Giriş</span>
+<p class="tech-desc">Vahid giriş nöqtəsi, dərhal bildirişlər və tətbiqdən çıxmadan təsdiq imkanı.</p>
+</div>
+</div>
+<!-- Card 6: 1C ERP -->
+<div class="tech-card">
+<div class="icon-box">
+<i class="fas fa-server"></i>
+</div>
+<div class="card-content">
+<span class="tech-name">1C ERP</span>
+<span class="tech-role">Sinxronizasiya</span>
+<p class="tech-desc">Kadrlar, struktur və məzuniyyət qalıqlarının iki tərəfli inteqrasiyası.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="page-number">08</div>
+</div>
+    <script>
+function scaleSlide() {
+    const slide = document.querySelector('.slide-container');
+    const scaleX = window.innerWidth / 1280;
+    const scaleY = window.innerHeight / 720;
+    const scale = Math.min(scaleX, scaleY);
+    slide.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', scaleSlide);
+scaleSlide();
+</script>
+</body>
+</html>

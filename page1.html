@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="az">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cover Slide</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            color: #363b3f;
+
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #f4f4f4;
+        }
+        /* Color Variables based on corporate identity */
+        .text-primary { color: #363b3f; }
+        .text-secondary { color: #656c72; }
+        .text-accent { color: #a22a2c; }
+        .bg-primary { background-color: #363b3f; }
+        .bg-accent { background-color: #a22a2c; }
+        .border-accent { border-color: #a22a2c; }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Decorative Elements */
+        .decorative-line {
+            width: 140px;
+            height: 6px;
+            background-color: #a22a2c;
+            margin: 2rem auto;
+            border-radius: 4px;
+        }
+        
+        .corner-shape-top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 350px;
+            height: 350px;
+            background-color: #e8e8e8; /* Slightly darker than bg for subtle effect */
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            z-index: 0;
+        }
+        
+        .corner-shape-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            background-color: #e8e8e8;
+            clip-path: polygon(0 100%, 0 0, 100% 100%);
+            z-index: 0;
+        }
+
+        .stat-card {
+            background-color: white;
+            box-shadow: 0 10px 30px -10px rgba(54, 59, 63, 0.15);
+            border-bottom: 5px solid #a22a2c;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-pill {
+            background-color: #363b3f;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #scale-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.slide-container {
+
+    transform-origin: center center;
+}
+
+    </style>
+</head>
+<body>
+
+<body>
+
+<div id="scale-wrapper">
+  <div class="slide-container">
+
+    <!-- Geometric Backgrounds -->
+    <div class="corner-shape-top"></div>
+    <div class="corner-shape-bottom"></div>
+
+    <!-- Main Content Area -->
+    <div class="z-10 w-full max-w-5xl px-10 text-center flex flex-col items-center">
+
+      <div class="mb-8">
+        <span class="tech-pill flex items-center gap-2">
+          <i class="fab fa-microsoft text-lg"></i>
+          <span>Power Platform</span>
+        </span>
+      </div>
+
+      <div class="mb-4">
+        <h1 class="text-6xl font-extrabold title-font text-primary leading-tight mb-2 tracking-tight">
+          Biznes Proseslərin<br/>Avtomatlaşdırılması
+        </h1>
+        <h2 class="text-4xl font-light title-font text-secondary mt-2">
+          2025 Nəticələri
+        </h2>
+      </div>
+
+      <div class="decorative-line"></div>
+
+      <div class="grid grid-cols-3 gap-10 mt-6 w-full max-w-4xl">
+        <div class="stat-card p-8 rounded-xl flex flex-col items-center justify-center">
+          <div class="text-5xl font-bold text-accent title-font mb-2">30</div>
+          <p class="text-sm font-bold uppercase tracking-widest text-secondary">Funksiya</p>
+        </div>
+
+        <div class="stat-card p-8 rounded-xl flex flex-col items-center justify-center">
+          <div class="text-5xl font-bold text-accent title-font mb-2">3</div>
+          <p class="text-sm font-bold uppercase tracking-widest text-secondary">İstiqamət</p>
+        </div>
+
+        <div class="stat-card p-8 rounded-xl flex flex-col items-center justify-center">
+          <div class="text-5xl font-bold text-accent title-font mb-2">100%</div>
+          <p class="text-sm font-bold uppercase tracking-widest text-secondary">Tamamlanma</p>
+        </div>
+      </div>
+
+      <div class="mt-16 flex items-center text-secondary opacity-70">
+        <p class="text-sm font-semibold tracking-wide">
+          <i class="fas fa-chart-line mr-2"></i> İLLİK HESABAT TƏQDİMATI
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function scaleSlide() {
+    const slide = document.querySelector('.slide-container');
+    const scaleX = window.innerWidth / 1280;
+    const scaleY = window.innerHeight / 720;
+    const scale = Math.min(scaleX, scaleY);
+    slide.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', scaleSlide);
+scaleSlide();
+</script>
+
+</body>
+</html>
