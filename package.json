@@ -1,0 +1,11 @@
+{
+  "name": "hr-grading-salary-system",
+  "version": "1.0.0",
+  "description": "Enterprise-grade grading and salary management system replacing Excel ToRate logic",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  }
+}
