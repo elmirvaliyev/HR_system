@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Grading & Salary System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Enterprise Grading & Salary Management</h1>
+    <button id="runCalculation">Run Calculation</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Configuration Service</h2>
+      <form id="configForm">
+        <label>Inflation Rate <input name="inflationRate" type="number" step="0.0001" required /></label>
+        <label>Base Salary <input name="baseSalary" type="number" step="0.01" required /></label>
+        <label>Total Grades <input name="totalGrades" type="number" value="20" min="1" required /></label>
+        <button type="submit">Save Configuration</button>
+      </form>
+      <p id="configStatus"></p>
+    </section>
+
+    <section class="card">
+      <h2>Calculation Inputs (CI values)</h2>
+      <form id="ciForm">
+        <label>CI Values (comma separated)
+          <textarea name="values" rows="3" placeholder="100,95,90,88"></textarea>
+        </label>
+        <button type="submit">Save CI Inputs</button>
+      </form>
+      <p id="ciStatus"></p>
+    </section>
+
+    <section class="card">
+      <h2>Reporting Service</h2>
+      <label>Run ID <input id="runIdInput" type="number" min="1" /></label>
+      <div class="export-actions">
+        <button data-format="csv">Export CSV</button>
+        <button data-format="xlsx">Export Excel</button>
+        <button data-format="pdf">Export PDF</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Latest Results Dashboard</h2>
+      <div id="summary"></div>
+      <div id="bandChart" class="band-chart"></div>
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th>Grade</th><th>Min Score</th><th>Avg Score</th><th>Max Score</th>
+            <th>Final %</th><th>Min Salary</th><th>Avg Salary</th><th>Max Salary</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
